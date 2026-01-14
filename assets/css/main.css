@@ -622,6 +622,11 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+/*Cambio del icono de las Breadcrumbs*/
+.page-title .breadcrumbs ol li + li::before {
+  content: ">";
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/

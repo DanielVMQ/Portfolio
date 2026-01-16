@@ -17,6 +17,17 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+/*Añado una nueva fuente*/
+@font-face {
+  font-family: 'Ranade-Variable';
+  src: url('../fonts/Ranade_Complete/Fonts/WEB/fonts/Ranade-Variable.woff2') format('woff2'),
+       url('../fonts/Ranade_Complete/Fonts/WEB/fonts/Ranade-Variable.woff') format('woff'),
+       url('../fonts/Ranade_Complete/Fonts/WEB/fonts/Ranade-Variable.ttf') format('truetype');
+  font-weight: 100 700;
+  font-display: swap;
+  font-style: normal;
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #1F1F1F; /* Background color for the entire website, including individual sections */
@@ -593,8 +604,10 @@ h6 {
 }
 
 .page-title .heading h1 {
-  font-size: 38px;
+  font-size: 65px;
   font-weight: 700;
+  /*Añado la nueva fuente*/
+  font-family: 'Ranade-Variable';
 }
 
 .page-title nav {
@@ -1392,17 +1405,16 @@ section,
   padding: 20px 30px;
 }
 
+/*Eliminación del background y cambio de color del icono*/
 .contact .info-item .icon {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--accent-color);
   width: 56px;
   height: 56px;
-  font-size: 24px;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
-  border-radius: 50%;
   margin-right: 15px;
 }
 
@@ -1435,6 +1447,13 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-top: 30px;
+}
+
+/*Uso de la media query para ajustar la columna derecha cuando no hay suficiente espacio */
+@media (max-width: 767px) {
+  #contact > div > form > div > div.col-md-6.d-flex.flex-column.justify-content-between{
+    gap: 10px;
+  }
 }
 
 @media (max-width: 575px) {

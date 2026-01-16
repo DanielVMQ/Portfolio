@@ -778,6 +778,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#about > div > div > div.col-lg-3 > img{
+  background-color: var(--surface-color);
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;

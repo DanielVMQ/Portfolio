@@ -892,9 +892,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Interests Section
+# Languages Section
 --------------------------------------------------------------*/
-.interests .features-item {
+.languages .features-item {
   background-color: var(--surface-color);
   display: flex;
   align-items: center;
@@ -904,31 +904,37 @@ section,
   position: relative;
 }
 
-.interests .features-item i {
+.languages .features-item i {
   font-size: 32px;
   padding-right: 10px;
   line-height: 0;
 }
 
-.interests .features-item h3 {
+.languages .features-item h3 {
   font-weight: 700;
   margin: 0;
-  padding: 0;
+  padding-left: 10px;
   line-height: 1;
   font-size: 16px;
 }
 
-.interests .features-item h3 a {
+.languages .features-item h3 a {
   color: var(--heading-color);
   transition: 0.3s;
 }
 
-.interests .features-item:hover {
+.languages .features-item:hover {
   border-color: var(--accent-color);
 }
 
-.interests .features-item:hover h3 a {
+.languages .features-item:hover h3 a {
   color: var(--accent-color);
+}
+
+/*Añado una altura y anchura a los iconos de la seccion interests */
+.languages .icon{
+  width:35px;
+  height:35px;
 }
 
 /*--------------------------------------------------------------

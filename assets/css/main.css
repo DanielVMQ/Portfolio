@@ -813,7 +813,7 @@ section,
 # Idioms Section
 --------------------------------------------------------------*/
 
-.idioms .language-flag {
+.idioms .language-flag img {
   background-color: var(--surface-color);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   width: 64px;
@@ -873,15 +873,15 @@ section,
 .languages-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-  gap: 20px; /* espacio entre items */
+  gap: 10px; /* espacio entre items */
   justify-items: center; /* centra cada item */
   align-items: center;
 }
 
 .features-item-circle {
   background-color: var(--surface-color);
-  border-radius: 50%;
-  width: 110px;
+  border-radius: 10%;
+  width: 150px;
   height: 110px;
   display: flex;
   flex-direction: column;

@@ -195,6 +195,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.308);
   }
 
   .navmenu ul {
@@ -212,10 +213,6 @@ h6 {
   .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
-  }
-
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
   }
 
   .navmenu a,
@@ -279,7 +276,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.308);
   }
 
   .navmenu .dropdown ul li {
@@ -1163,6 +1160,13 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+.contact-page .heading {
+  background-image: url("../img/imagenes/imagen2.jpg");
+  background-position: 200px;
+  background-size: auto;
+}
+
 .contact .info-item {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
@@ -1214,6 +1218,10 @@ section,
 
 /*Uso de la media query para ajustar la columna derecha cuando no hay suficiente espacio */
 @media (max-width: 767px) {
+
+  .contact-page .heading {
+  background-position: left;
+  }
   #contact > div > form > div > div.col-md-6.d-flex.flex-column.justify-content-between{
     gap: 10px;
   }

@@ -1,0 +1,142 @@
+:root {
+  --bg-main: #161616;
+  --bg-secondary: #1F1F1F;
+  --text-main: #F2F2F2;
+  --accent: #7BAE9E;
+  --accent-dark: #4F7F71;
+  --detail: #E6ECE9;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-secondary);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+  padding: 5rem 1rem;
+}
+
+.subtitle {
+  color: #bdbdbd;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--accent);
+  border: none;
+  color: #161616;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  color: #ffffff;
+}
+
+/* Tamaño general del bloque carrusel + detalles */
+.carousel-section .row {
+  min-height: 520px; /* antes implícito, ahora más grande */
+}
+
+/* Carrusel */
+.carousel {
+  height: 100%;
+}
+
+/* Imagen del carrusel un poco más grande */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Detalles del producto misma altura */
+.product-details {
+  height: 100%;
+  background-color: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.precio {
+    color: var(--accent-dark);
+}
+
+/* Detalles del producto */
+.product-details {
+  background-color: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+}
+
+.product-description {
+  color: #cfcfcf;
+  margin-bottom: 1.5rem;
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+}
+
+.product-features li {
+  margin-bottom: 0.75rem;
+  color: #e0e0e0;
+}
+
+.product-features strong {
+  color: var(--accent);
+}
+
+/* Features */
+.features {
+  background-color: var(--bg-main);
+}
+
+.feature-card {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.feature-card h5 {
+  margin-top: 1rem;
+}
+
+.feature-card p {
+  color: #bdbdbd;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+/* CTA */
+.cta {
+  background-color: var(--bg-secondary);
+}
+
+.cta p {
+  color: #cfcfcf;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-secondary);
+  color: var(--detail);
+}

@@ -775,6 +775,11 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about-page .page-title .heading {
+  background-image: url("../img/imagenes/imagen3.jpg");
+  background-position: right;
+}
+
 #about > div > div > div.col-lg-3 > img{
   background-color: var(--surface-color);
 }

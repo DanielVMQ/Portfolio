@@ -1,0 +1,153 @@
+/* ============================
+   RESET BÁSICO
+============================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f4f7f6;
+  color: #1f2933;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* ============================
+   H1 PRINCIPAL
+============================ */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1f4f46;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   H2 DE TABLAS
+============================ */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 3rem 0 1rem;
+  padding-left: 0.75rem;
+  border-left: 6px solid #7BAE9E;
+  color: #2f5d53;
+}
+
+/* ============================
+   TABLAS
+============================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4rem;
+  font-size: 0.95rem;
+}
+
+/* CABECERA */
+thead {
+  background-color: #7BAE9E;
+}
+
+thead th {
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* FILAS */
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f6f4;
+}
+
+tbody tr:hover {
+  background-color: #e3f0ec;
+}
+
+/* CELDAS */
+td {
+  text-align: center;
+  padding: 0.9rem;
+  vertical-align: middle;
+}
+
+/* ============================
+   IMÁGENES EN TABLA
+============================ */
+td img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+td img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================
+   RESPONSIVE PARA MÓVILES
+============================ */
+@media (max-width: 900px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #d6e5e1;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #2f5d53;
+    flex: 1;
+    text-align: left;
+  }
+
+  td img {
+    margin-right: 0.5rem;
+  }
+}
+
+/* ============================
+   ESTILO EXTRA (opcionales)
+============================ */
+tbody td[data-label="Reducción (%)"] {
+  font-weight: 600;
+  color: #166534; /* verde suave */
+}
+
+tbody td[data-label="Formato Elegido"] {
+  font-style: italic;
+  color: #115e59;
+}

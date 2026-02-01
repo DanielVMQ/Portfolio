@@ -1272,7 +1272,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--nav-dropdown-hover-color);
+  background: var(--nav-dropdown-background-color);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -1280,5 +1280,5 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, #1c2426, transparent 20%);
 }

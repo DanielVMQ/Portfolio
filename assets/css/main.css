@@ -1272,7 +1272,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--nav-dropdown-hover-color);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;

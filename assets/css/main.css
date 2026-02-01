@@ -948,7 +948,7 @@ section,
 
 .resume .resume-item p {
   font-size: 15px;
-  color: #555;
+  color: var(--contrast-color);
   margin-bottom: 10px;
 }
 
@@ -961,7 +961,7 @@ section,
 .resume .resume-item ul li {
   padding-bottom: 8px;
   font-size: 15px;
-  color: #444;
+  color: var(--contrast-color);
 }
 
 .resume .resume-item::before {

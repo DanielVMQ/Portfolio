@@ -33,7 +33,10 @@ tamaño a los svg
 .day .door {
   position: absolute;
   inset: 0;
-  background-color: #b73a3b;
+
+  background-color: #2F6B57;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23D9DED9' opacity='0.25'%3E%3Cpolygon points='30,8 32,28 52,30 32,32 30,52 28,32 8,30 28,28'/%3E%3Cpolygon points='10,10 11,16 16,17 11,18 10,24 9,18 4,17 9,16'/%3E%3Cpolygon points='50,10 51,16 56,17 51,18 50,24 49,18 44,17 49,16'/%3E%3Cpolygon points='10,50 11,56 16,57 11,58 10,64 9,58 4,57 9,56'/%3E%3Cpolygon points='50,50 51,56 56,57 51,58 50,64 49,58 44,57 49,56'/%3E%3C/g%3E%3C/svg%3E");
+
   border-radius: 10px;
   z-index: 2;
 
@@ -48,9 +51,25 @@ tamaño a los svg
 /* Número */
 .day .door span {
   font-family: "Pacifico", cursive;
-  font-size: 40px;
-  color: #fff;
+  font-size: 32px;
+  color: #FAFAF8;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
   pointer-events: none;
+}
+
+.day.alt .door {
+  background-color: #A9C6B8;
+}
+
+.day.special .door {
+  background-color: #1F4F3A;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.day.special .door span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #B9A26A;
 }
 
 /* Animación al hover */
@@ -111,8 +130,9 @@ Creo la disposición de los dias del div uno
 */
 
 h1{
-  color: #b73a3b;
+  color: #B9A26A;
   font-size: 55px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
 }
 
 #uno div:first-child{
@@ -366,7 +386,7 @@ Creo la disposición de los dias del div cuatro
 }
 
 .sobreMi a{
-  color: #ce4242;
+  color: #B9A26A;
   font-size: 25px;
   font-weight: 1000;
   text-decoration: none;

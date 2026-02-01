@@ -17,7 +17,7 @@
   </div>
 
   <!-- DÍA 1 -->
-  <div class="day normal dia_uno">
+  <div class="day alt normal dia_uno">
     <div class="door">
       <span>1</span>
     </div>
@@ -89,7 +89,7 @@
   </div>
 
   <!-- DÍA 5 -->
-  <div class="day normal dia_cinco">
+  <div class="day alt normal dia_cinco">
     <div class="door">
       <span>5</span>
     </div>
@@ -145,7 +145,7 @@
 </div>
 
 <!-- DÍA 7 -->
-<div class="day normal dia_siete">
+<div class="day alt normal dia_siete">
   <div class="door"><span>7</span></div>
   <svg viewBox="-100 -100 200 200">
     <circle cx="0" cy="-50" r="10" fill="#a9172a" />
@@ -187,7 +187,7 @@
 </div>
 
 <!-- DÍA 21 -->
-<div class="day normal dia_veintiuno">
+<div class="day alt normal dia_veintiuno">
   <div class="door"><span>21</span></div>
   <svg viewBox="-100 -100 200 200">
     <rect x="-100" y="-100" width="200" height="200" fill="#CD803D" />
@@ -204,15 +204,93 @@
 <!-- DÍA 22 -->
 <div class="day largo_dos dia_veintidos">
   <div class="door"><span>22</span></div>
-  <svg viewBox="0 0 240 120">
-    <!-- tu muñeco, intacto -->
+  <svg width="200" height="100">
+    <g transform="translate(70, 170)">
+      <g id="arm1" transform="rotate(-25)">
+        <!-- 1st arm -->
+        <path d="M 0 0 L 0 -70" class="arm" />
+        <circle r="5" />
+
+        <g transform="translate(0, -70)">
+          <g id="arm2" transform="rotate(50)">
+            <!-- 2nd arm -->
+            <path d="M 0 0 L 0 -70" class="arm" />
+            <circle r="5" />
+
+            <g transform="translate(0, -70)">
+              <g id="arm3" transform="rotate(45)">
+                <!-- 3rd arm -->
+                <path d="M 0 0 L 0 -30" class="arm" />
+                <circle r="5" />
+
+                <g transform="translate(0, -30)">
+                  <g id="head" transform="rotate(-90)">
+                    <!-- Head -->
+                    <path d="M -30 30 Q 0 -20 30 30 Q 0 35 -30 30" fill="gray" />
+                    <circle cx="0" cy="25" r="10" fill="gold" />
+                    <path d="M -30 30 Q 0 -20 30 30 Q 0 25 -30 30" />
+                    <rect x="-10" y="-10" width="20" height="30" rx="5" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Base -->
+    <ellipse cx="100" cy="175" rx="30" ry="5" />
+    <ellipse cx="100" cy="170" rx="30" ry="5" fill="gray" />
   </svg>
+  <script>
+    const head = document.getElementById("head");
+    const arm1 = document.getElementById("arm1");
+    const arm2 = document.getElementById("arm2");
+    const arm3 = document.getElementById("arm3");
+
+    let arm1Rotation = -25;
+    let arm3Rotation = 45;
+
+    let newArm1Rotation = arm1Rotation;
+    let newArm3Rotation = arm3Rotation;
+
+    let isDragging = false;
+    let dragStartX, dragStartY;
+
+    head.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+
+      const dx = e.clientX - dragStartX;
+      const dy = e.clientY - dragStartY;
+
+      newArm1Rotation = Math.max(-60, Math.min(0, arm1Rotation - dy * 0.5));
+      newArm3Rotation = Math.max(-90, Math.min(90, arm3Rotation - dx * 0.8));
+
+      arm1.setAttribute("transform", `rotate(${newArm1Rotation})`);
+      arm2.setAttribute("transform", `rotate(${-newArm1Rotation * 2})`);
+      arm3.setAttribute("transform", `rotate(${newArm3Rotation})`);
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+
+      arm3Rotation = newArm3Rotation;
+      arm1Rotation = newArm1Rotation;
+    });
+  </script>
 </div>
 </div>
 
 <div id="tres">
 <!-- DÍA 10 -->
-<div class="day normal dia_diez">
+<div class="day alt normal dia_diez">
   <div class="door"><span>10</span></div>
   <svg viewBox="-100 -100 200 200">
     <g transform="translate(0 5)">
@@ -358,7 +436,7 @@
 </div>
 
 <!-- DÍA 16 -->
-<div class="day largo_dos dia_dieciseis">
+<div class="day alt largo_dos dia_dieciseis">
   <div class="door"><span>16</span></div>
   <svg viewBox="-200 -100 400 200" fill="none">
     <path
@@ -388,11 +466,11 @@
 </div>
 
 <div class="sobreMi normal">
-    <a href="" class="pacifico-regular">Say Hello</a>
+    <a href="../../contact.html" class="pacifico-regular">Say Hello</a>
 </div>
 
 <!-- DÍA 18 -->
-<div class="day normal dia_dieciocho">
+<div class="day alt normal dia_dieciocho">
   <div class="door"><span>18</span></div>
   <svg viewBox="-100 -100 200 200">
     <path
@@ -482,7 +560,7 @@
 </div>
 
 <!-- DÍA 24 -->
-<div class="day normal dia_veinticuatro">
+<div class="day special normal dia_veinticuatro">
   <div class="door"><span>24</span></div>
   <svg viewBox="-100 -100 200 200" class="snow-globe">
     <defs>

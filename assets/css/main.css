@@ -1104,6 +1104,12 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details-page .heading {
+  background-image: url("../img/imagenes/imagen2.jpg");
+  background-position: 200px;
+  background-size: auto;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }

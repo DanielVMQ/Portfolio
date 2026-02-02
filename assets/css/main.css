@@ -1032,9 +1032,6 @@ Responsive
   max-width: 1200px;
   margin: 0 auto 0px auto;
   transition: transform 0.3s, box-shadow 0.3s;
-  text-shadow:
-     2px 2px 4px rgba(0,0,0,0.7),  /* sombra diagonal inferior derecha */
-    -2px -2px 4px rgba(0,0,0,0.7);  /* sombra diagonal superior izquierda */
 }
 
 .resume-card:hover {
@@ -1088,6 +1085,12 @@ Responsive
   font-size: 17px;
   color: var(--contrast-color);
   line-height: 1.8;
+  margin-left: 2.5em;
+}
+
+.resume-section h4,
+.resume-section h5 {
+  margin-left: 2.5em;
 }
 
 .contact-info {
